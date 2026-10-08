@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lexmark Teilefinder</title>
+  <meta name="description" content="Fehlercode oder Problem eingeben und die passende Lexmark-Ersatzteilnummer finden.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Lexmark Teilefinder</h1>
+    <p class="sub">Fehlercode oder Problem → Ersatzteilnummer</p>
+  </header>
+
+  <main>
+    <section class="step">
+      <label for="model"><span class="num">1</span> Druckermodell</label>
+      <select id="model">
+        <option value="">Modell wählen …</option>
+      </select>
+      <p class="hint">Steht vorne am Gerät oder auf dem Typenschild.</p>
+    </section>
+
+    <section class="step">
+      <label for="q"><span class="num">2</span> Fehlercode oder Problem</label>
+      <input id="q" type="search" inputmode="text" autocomplete="off"
+             placeholder="z. B. 121.04 oder „Papierstau Fach 2“" disabled>
+    </section>
+
+    <div id="demo-banner" class="banner" hidden>
+      DEMO-Daten: Die Nummern sind Platzhalter und <strong>keine echten Lexmark-Teilenummern</strong>.
+    </div>
+
+    <section id="results" aria-live="polite"></section>
+  </main>
+
+  <footer>
+    Daten aus den Lexmark Service-Manuals. Teilenummer vor der Bestellung im Manual prüfen (Seite ist angegeben).
+  </footer>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>
