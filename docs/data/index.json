@@ -1,0 +1,5 @@
+{
+  "families": [
+    { "family": "demo", "file": "demo.json", "models": ["DEMO-Drucker"], "demo": true }
+  ]
+}

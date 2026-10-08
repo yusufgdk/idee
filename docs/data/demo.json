@@ -1,0 +1,74 @@
+{
+  "family": "demo",
+  "title": "DEMO-Daten (keine echten Teilenummern)",
+  "demo": true,
+  "models": ["DEMO-Drucker"],
+  "source": { "manual": "Beispiel – ersetzt durch echtes Lexmark Service-Manual", "url": "" },
+  "parts": {
+    "DEMO-0001": { "name": "Fuser assembly 230 V", "voltage": "230V", "page": 210 },
+    "DEMO-0002": { "name": "Fuser assembly 110 V", "voltage": "110V", "page": 210 },
+    "DEMO-0003": { "name": "Tray 2 pick roller assembly", "page": 214 },
+    "DEMO-0004": { "name": "Imaging unit", "page": 205 },
+    "DEMO-0005": { "name": "Transfer belt (ITM) assembly", "page": 206 },
+    "DEMO-0006": { "name": "Main controller board", "page": 220 },
+    "DEMO-0007": { "name": "Duplex unit", "page": 216 }
+  },
+  "errors": [
+    {
+      "code": "121.04",
+      "title": "Fuser error – temperature low",
+      "action": "Check the fuser connection. Replace the fuser assembly.",
+      "frus": ["DEMO-0001", "DEMO-0002"],
+      "page": 85
+    },
+    {
+      "code": "121.xx",
+      "title": "Fuser error",
+      "action": "Turn the printer off and on. Replace the fuser assembly.",
+      "frus": ["DEMO-0001", "DEMO-0002"],
+      "page": 84
+    },
+    {
+      "code": "242.01",
+      "title": "Paper jam in tray 2 – media failed to reach sensor",
+      "action": "Check tray 2 for obstructions. Replace the tray 2 pick roller assembly.",
+      "frus": ["DEMO-0003"],
+      "page": 102
+    },
+    {
+      "code": "31.40",
+      "title": "Imaging unit missing or defective",
+      "action": "Reinstall the imaging unit. Replace the imaging unit.",
+      "frus": ["DEMO-0004"],
+      "page": 60
+    },
+    {
+      "code": "SYMPTOM-SMEAR",
+      "title": "Print quality: toner smears or rubs off the page",
+      "action": "Check media type settings. Replace the fuser assembly.",
+      "frus": ["DEMO-0001", "DEMO-0002"],
+      "page": 140
+    },
+    {
+      "code": "SYMPTOM-STREAKS",
+      "title": "Print quality: vertical streaks or lines",
+      "action": "Clean the printhead lenses. Replace the imaging unit. Replace the transfer belt.",
+      "frus": ["DEMO-0004", "DEMO-0005"],
+      "page": 142
+    },
+    {
+      "code": "235.01",
+      "title": "Paper jam in duplex area",
+      "action": "Remove jammed paper. Replace the duplex unit.",
+      "frus": ["DEMO-0007"],
+      "page": 110
+    },
+    {
+      "code": "900.xx",
+      "title": "System software error",
+      "action": "Update the firmware. Replace the main controller board.",
+      "frus": ["DEMO-0006"],
+      "page": 130
+    }
+  ]
+}
